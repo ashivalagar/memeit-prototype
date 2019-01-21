@@ -2,7 +2,9 @@
 
 The program is a telegram bot that works in the following way:
 1) The user must send in an image in telegram chat which is controlled by an evil bot.
+
 2)The evil bot then sends back the same image with an appropriate(18+ only) caption
+
 3)Enjoy dank memes by brownie_memes.
 
 How It Works:
