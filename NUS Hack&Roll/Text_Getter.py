@@ -1,3 +1,5 @@
+#Getting text off an image.
+
 import io
 import os
 

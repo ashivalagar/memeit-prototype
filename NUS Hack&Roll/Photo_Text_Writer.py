@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#Defining a function to write generated captions onto the the uploaded image.
 
 import PIL
 from PIL import ImageFont
@@ -10,6 +11,7 @@ import sys
 
 def make_meme(topString, bottomString, filename):
 
+	#Opening the image and quantifying its size.
 	img = Image.open(filename)
 	imageSize = img.size
 
