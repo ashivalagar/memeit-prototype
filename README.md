@@ -1,4 +1,4 @@
-#Readme pliz I am lonely
+## Meme Generator 
 
 The program is a telegram bot that works in the following way:
 
