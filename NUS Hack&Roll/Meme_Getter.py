@@ -1,5 +1,4 @@
 def give_path(path):
-    import io
     import os
     paths=[]
     for (dirpath, dirnames, filenames) in os.walk(path):
