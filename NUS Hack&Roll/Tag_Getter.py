@@ -1,3 +1,6 @@
+#Generating tags for each picture using Google Vision API's label detection function.
+
+
 import io
 import os
 def detect_labels(path):
