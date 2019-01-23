@@ -1,6 +1,13 @@
 ## Meme Generator 
 
+<<<<<<< HEAD
 The program is a telegram bot that works in the following way:
+=======
+NUS HACK'n'ROLL 2019
+TEAM NAME: BrownieMemes
+
+
+>>>>>>> working-model
 
 1) The user must send in an image in telegram chat which is controlled by an evil bot.
 
@@ -13,6 +20,16 @@ Created DataBase of over 2000+ reddit memes and their properties.
 The program then matches the submitted picture with the database using Google Vision comparing the tags and emotion present in the image sent by the user and finds the best matching caption.
 
 Aiming for : "Most useless but Awesome Hack"(but will appreciate any prize. More the merrier)
+
+
+
+
+
+Team Members:
+-Abhinav Narayana Balasubramaniam - 226
+-Rajgopal Iyer - 246
+-Vivek Adrakatti - 247
+-Shiv Alagar TGH Ashok Kumar - 772
 
 
 
