@@ -1,33 +1,60 @@
-=======
-## Meme Generator 
+# Meme Generator 
 
-The program is a telegram bot that works in the following way:
-=======
+The program is a python chatbot, which takes in an image and makes it into a meme. The project was made for the Hackathon conducted in NUS, Hack&Roll 2018. 
 
-NUS HACK'n'ROLL 2019
-TEAM NAME: BrownieMemes
+## Brownie Memes
+* Abhinav Narayana Balasubramaniam - 226
+* Rajgopal Iyer - 246
+* Vivek Adrakatti - 247
+* Shiv Alagar TGH Ashok Kumar - 772
 
+## Contesting for prize
+Most useless but innovative hack
 
-1) The user must send in an image in telegram chat which is controlled by an evil bot.
+## Behind the scenes
 
-2) The evil bot then sends back the same image with an appropriate(18+ only) caption
+### Making a database
+* We used google vision API to get descriptions, emotions and text off of images.
+* We created a database of descriptions, emotions and text by writing the data into an XLS file.
+* We ran the above code on a dataset of 3000 memes.
 
-3) Enjoy dank memes by brownie_memes.
+### Selecting the most appropriate text required for each meme
+* Our selection algorithm filtered out our text for the memes based on the following priority: 1. emotion 2. number of matching description tags 3. lenght of meme text .
+* After our meme text got selected we wrote our text onto our photo.
 
-How It Works:
-Created DataBase of over 2000+ reddit memes and their properties.
-The program then matches the submitted picture with the database using Google Vision comparing the tags and emotion present in the image sent by the user and finds the best matching caption.
+### Front-end
+* Our front end was made using a telegram bot api, based on picture input the code would output a meme.
 
-Aiming for : "Most useless but Awesome Hack"(but will appreciate any prize. More the merrier).
+## Prerequisites needed
+Install the following python libraries using pip3
+```
+google-cloud
+pillow
+xlwt
+wget
+requests
+pyTelegramBotAPI
+```
 
+## To run the code
+* Create a project on google console.
+* Enable google cloud vision API.
+* Download the API key json file.
+* Open the terminal/bash and run the following command
+```
+export GOOGLE_APPLICATION_CREDENTIALS="path to API key"
+```
+* Create a telegram bot using bot father and replace the link used in the Bot_Trial.py with the one obtained by you.
+* Open the command line and run the following to run the telegram bot.
+* Send pictures and get the meme-ified.
 
+```
+python3 Bot_Trial.py
+```
 
-Team Members:
--Abhinav Narayana Balasubramaniam - 226
--Rajgopal Iyer - 246
--Vivek Adrakatti - 247
--Shiv Alagar TGH Ashok Kumar - 772
+<!-- ## Memefied images
 
-
-
-SEND MEMES SOLVE DEPRESSION!
+### Input
+Pictures here
+### Output
+Memefied output -->
