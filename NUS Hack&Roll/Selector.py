@@ -1,12 +1,14 @@
 import pandas as pd
 from random import randint
 
-memes = pd.read_csv('/Users/vivekadrakatti/Documents/NUS Hack&Roll/dataset.csv')
+memes = pd.read_csv('Database/dataset.csv')
 tag_list = memes['Tags'].tolist()
 emotion_list = memes['Emotion'].tolist()
 caption_list = memes['Text'].tolist()
 # function to get meme text appropriately
+
 def simple_function(picture_emotions,picture_tags):
+
     indexes_emotion=[]
     indexes_captions=[]
     for i in range(len(emotion_list)):
@@ -19,14 +21,23 @@ def simple_function(picture_emotions,picture_tags):
                 if (int(emotion_list[i][j])>=2 and int(picture_emotions[j])>=2):
                     indexes_emotion.append(i)
                     break
+    # print('emotion',indexes_emotion)
     for i in indexes_emotion:
         if(len(caption_list[i])>3):
             indexes_captions.append(i)
+    # print('captions',indexes_captions)
+    # print('picture_tags',picture_tags)
     final_index = []
     for i in indexes_captions:
         for j in picture_tags:
+            print(j,tag_list[i],sep='\n')
+            j=j.lower()
             if (j in str(tag_list[i])):
+                print('tag list', tag_list[i])
                 final_index.append(i)
+
+    print('final index',final_index)
+
     majority=[0 for i in range(len(final_index))]
     k=-1
     for i in final_index:
@@ -34,6 +45,7 @@ def simple_function(picture_emotions,picture_tags):
         for j in picture_tags:
             if(j in tag_list[i]):
                 majority[k]+=1
+    print('majority',majority)
     index_M = []
     maximum = max(majority)
     for i in range(len(final_index)):
